@@ -68,7 +68,7 @@ a{text-decoration: none; color: white;}
 }
 
 .btn{
-    border: 1px solid white;
+    border: 2px solid white;
     padding: 10px 30px;
     border-radius: 25px;
     font-size: 1em;
@@ -91,7 +91,7 @@ a{text-decoration: none; color: white;}
     letter-spacing: 0px;
     text-transform: uppercase;
     transform: rotate(270deg);
-    width: 10%;
+    /* width: 10%; */
 } 
 
 .header .bottom .right{
@@ -102,7 +102,7 @@ a{text-decoration: none; color: white;}
     content: 'singh';
     position: absolute;
     top: 20px;
-    left: 20px;
+    left: -15px;
     font-size: 2em;
     -webkit-text-stroke: 1px #fff;
     color: transparent;
@@ -120,3 +120,55 @@ a{text-decoration: none; color: white;}
 /* -------------- BLOG SECTION ---------------- */
 
 /* -------------- FOOTER SECTION ---------------- */
+
+
+
+/* ---------------- MEDIA QUERIES -------------- */
+@media all and (max-width: 1300px) {
+    .header .mid .text{
+      font-size: 2em;
+    }
+}
+
+@media all and (max-height: 800px) {
+    .header .mid .text, .header .bottom .left, .header .bottom .right{
+        font-size: 2em;
+    }
+}
+
+@media all and (max-width: 700px) {
+    .header .mid .text{
+      font-size: 1.5em;
+    }
+    .header .bottom .left, .header .bottom .right{
+        font-size: 2em;
+    }
+}
+
+@media all and (max-height: 700px) {
+    .header .mid .text{
+      font-size: 1.5em;
+    }
+}
+
+@media all and (max-width: 575px) {
+    .header .social-links i{
+        font-size: 1em;
+    }
+    .header .social-links{
+        width: 100px;
+    }
+    .header .logo{
+        font-size: 1.2em;
+    }
+    .header .top{padding: 0 50px;}
+    .header .mid .text, .header .bottom .left, .header .bottom .right{
+        font-size: 1.2em;
+    }
+    .btn{
+        padding: 2px 20px;
+        font-size: 15px;
+        margin-top: 1em;
+    }
+}
+
