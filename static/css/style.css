@@ -1,6 +1,7 @@
 /* font-family: 'Bebas Neue', cursive;
 font-family: 'Open Sans Condensed', sans-serif;
-font-family: 'Poppins', sans-serif; */
+font-family: 'Poppins', sans-serif; 
+font-family: 'Source Sans Pro', monospace;*/
 
 *{
     margin: 0;
@@ -11,11 +12,32 @@ font-family: 'Poppins', sans-serif; */
 
 li{list-style-type: none;}
 a{text-decoration: none; color: white;}
+body{background-color: black;}
+
+.btn{
+    border: 2px solid white;
+    padding: 10px 30px;
+    border-radius: 25px;
+    font-size: 1em;
+    font-family: 'Poppins', sans-serif;
+    text-transform: uppercase;
+    margin-top: 2em;
+}
+.social-links{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 150px;
+}
+
+.social-links i{
+    font-size: 1.2em;
+}
+
 
 /* -------------- HEADER SECTION ---------------- */
 .header{
     height: 100vh;
-    background-color: black;
 }
 
 .header .top{
@@ -32,16 +54,6 @@ a{text-decoration: none; color: white;}
     font-size: 2em;
 }
 
-.header .social-links{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 150px;
-}
-
-.header .social-links i{
-    font-size: 1.2em;
-}
 .header .mid{
     height: 50vh;
     display: flex;
@@ -65,16 +77,6 @@ a{text-decoration: none; color: white;}
     font-weight: bold;
     text-transform: uppercase;
     text-align: center;
-}
-
-.btn{
-    border: 2px solid white;
-    padding: 10px 30px;
-    border-radius: 25px;
-    font-size: 1em;
-    font-family: 'Poppins', sans-serif;
-    text-transform: uppercase;
-    margin-top: 2em;
 }
 
 .header .bottom{
@@ -109,9 +111,96 @@ a{text-decoration: none; color: white;}
 }
 
 
+nav{
+    background-color: white;
+    padding: 2px 0;
+}
+
+nav .navbar{
+    padding: 5px 20vw;
+    background-color: black;
+}
+
+nav ul{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-family: 'Poppins';
+    font-size: 1.2em;
+}
 /* -------------- ABOUT SECTION ---------------- */
+.about{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 15vh 15vw;
+}
 
+.about .title{
+    text-align: center;
+    font-family: 'Bebas Neue', cursive;
+    font-size: 3em;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+}
 
+.about .line{
+    width: 100px;
+    height: 5px;
+    background-color: white;
+    margin-bottom: 3em;
+}
+
+.about .content{
+    display: flex;
+    font-family: 'Source Sans Pro', monospace;
+    background: rgba(255,255,255, 0.1);
+    border-radius: 2em;
+    font-size: 18px;
+}
+
+.about .content .left, .about .content .right{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 2em 30px;
+    width: 50%;
+}
+
+.about .content .left .text div{
+    margin-bottom: 1em;
+}
+
+.about .social-links{
+    margin-top: 2em;
+}
+
+.about .right img{
+    max-height: 70vh;
+    max-width: 100%;
+}
+
+.about .right .text{
+    font-family: 'Bebas Neue';
+    font-size: 3em;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 0;
+    position: relative;
+    margin: 20px 0;
+}
+
+.about .right .text h1{
+    color: white;
+}
+.about .right .text:before{
+    content: 'endangered';
+    position: absolute;
+    top: 50px;
+    color: #5c5c5c;
+    /* z-index: -1; */
+}
 /* -------------- ENDANGERED ------------------- */
 
 
