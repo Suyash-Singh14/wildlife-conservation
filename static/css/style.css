@@ -34,6 +34,15 @@ body{background-color: black;}
     font-size: 1.2em;
 }
 
+.read-more{
+    font-family: 'Poppins';
+    font-weight: bold;
+    background-color: transparent;
+    border: 1px solid white;
+    border-radius: 25px;
+    padding: 5px 20px;
+    width: 150px;
+}
 
 /* -------------- HEADER SECTION ---------------- */
 .header{
@@ -205,7 +214,135 @@ nav ul{
 
 
 /* -------------- PROJECTS SECTION ---------------- */
+.projects{
+    height: 80vh;
+    /* background-image: url('/static/images/forest.png'); */
+    background-repeat: no-repeat;
+    background-size: cover;
+}
 
+.projects .container{
+    width: 80%;
+    padding: 10% 5%;
+    height: 100%;
+    margin: auto;
+    background: linear-gradient(rgb(72 0 72 / 29%), rgb(192 72 72 / 20%)), url('/static/images/forest.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.projects .slides{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    height: 80%;
+}
+
+.projects .slide{
+    display: flex;
+    width: 100%;
+    height: 100%;
+}
+
+.projects .slide .text-slides{
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 1em;
+    position: relative;
+}
+
+.projects .slide .text-slides .slide-text{
+    font-family: 'Poppins';
+    padding: 1em 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    opacity: 1;
+    transition: 0.4s ease;
+}
+
+.projects .slide .text-slides .slide-text.hidden, .image-slide.hidden img{
+    opacity: 0;
+    top: -100px;
+    transition: all 0.2s ease;
+}
+
+.projects .slide-text .subtitle{
+    font-family: 'Source Sans Pro', monospace;
+    font-size: 1.2em;
+    letter-spacing: 3px;
+    display: inline-block;
+}
+
+.projects .slide-text .title{
+    font-family: 'Poppins';
+    font-size: 2em;
+    font-weight: bold;
+}
+
+.projects .slide-text .content{
+    margin: 1em 0;
+}
+
+.projects .slide .image-slides{
+    position: relative;
+    width: 50%;
+}
+
+.projects .slide .image-slides .image-slide{
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+
+.projects .image-slide img{
+    height: 80%; 
+}
+
+.projects .slide-indicators{
+    width: 100%;
+    height: 20%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin-top: 2em;
+}
+
+.projects .slide-indicator{
+    width: 25%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.projects .slide-indicator .name{
+    font-size: 1.5em;
+    font-family: 'Source Sans Pro', monospace;
+}
+
+.projects .slide-indicator button{
+    background-color: transparent;
+    outline: none;
+    border: none;
+    width: 30px;
+    margin: 0 20px;
+}
+
+.projects .slide-indicator button i{
+    font-size: 1.5em;
+}
 /* -------------- BLOG SECTION ---------------- */
 
 /* -------------- FOOTER SECTION ---------------- */
@@ -213,15 +350,81 @@ nav ul{
 
 
 /* ---------------- MEDIA QUERIES -------------- */
+@media all and (max-width: 1500px) {
+    .projects .image-slide img{
+        height: 70%; 
+    }
+}
 @media all and (max-width: 1300px) {
     .header .mid .text{
       font-size: 2em;
+    }
+    .projects .image-slide img {
+        width: 80%;
+        height: auto;
+    }
+    .projects .slide-indicator .name {
+        font-size: 1.2em;
+    }
+    .slide-text{
+        font-size: 80%;
+    }
+    .read-more{
+        font-size: 1em;
+    }
+}
+
+@media all and (max-width: 1050px){
+    .projects{height: 65vh;}
+    .slide-text{
+        font-size: 70%;
+    }
+    .projects .slide-indicator .name {
+        font-size: 1em;
+    }
+}
+
+@media all and (max-width: 800px){
+    .projects .slide .text-slides{
+        width: 100%;
+        height: 100%;
+    }
+    .projects .slide{flex-direction: column;}
+    .projects {
+        height: 85vh;
+        padding: 5%;
+    }
+    .projects .slide .image-slides {
+        width: 100%;
+        height: 100%;
+    }
+    .projects .image-slide img {
+        width: 65%;
+    }
+    .projects .container{
+        width: 65%;
+    }
+    .projects .slide-text .content {
+        text-align: center;
+    }
+    .projects .slide-text{align-items: center;}
+    .projects .slides{height: 95%;}
+    .projects .slide-indicator .name{
+        display: none;
+    }
+    .projects .slide-indicators{
+        height: 5%;
+        width: 50%;
+        margin: auto;
     }
 }
 
 @media all and (max-height: 800px) {
     .header .mid .text, .header .bottom .left, .header .bottom .right{
         font-size: 2em;
+    }
+    .projects{
+        height: 100vh;
     }
 }
 
@@ -232,11 +435,17 @@ nav ul{
     .header .bottom .left, .header .bottom .right{
         font-size: 2em;
     }
+    .projects .image-slide img {
+        width: 90%;
+    }
 }
 
 @media all and (max-height: 700px) {
     .header .mid .text{
       font-size: 1.5em;
+    }
+    .projects .container{
+        padding: 5%;
     }
 }
 
@@ -258,6 +467,12 @@ nav ul{
         padding: 2px 20px;
         font-size: 15px;
         margin-top: 1em;
+    }
+    .projects .container {
+        width: 80%;
+    }
+    .slide-text{
+        font-size: 60%;
     }
 }
 
