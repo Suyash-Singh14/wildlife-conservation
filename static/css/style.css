@@ -10,9 +10,18 @@ font-family: 'Source Sans Pro', monospace;*/
     color: white;
 }
 
+:root{
+    --purple: rgb(193 146 252);
+    --dark: #121212;
+    --dark-gray: #222222;
+    --green: rgb(1 219 196);
+    --dark-purple: #3E065F;
+    --light-purple: #8E05C2;
+}
+
 li{list-style-type: none;}
 a{text-decoration: none; color: white;}
-body{background-color: black;}
+body{background-color: var(--dark);}
 
 .btn{
     border: 2px solid white;
@@ -119,10 +128,10 @@ body{background-color: black;}
     color: transparent;
 }
 
-
 nav{
-    background-color: white;
-    padding: 2px 0;
+    position: sticky;
+    top: 0;
+    left: 0;
 }
 
 nav .navbar{
@@ -157,14 +166,14 @@ nav ul{
 .about .line{
     width: 100px;
     height: 5px;
-    background-color: white;
+    background-color: rgb(1 219 196);;
     margin-bottom: 3em;
 }
 
 .about .content{
     display: flex;
     font-family: 'Source Sans Pro', monospace;
-    background: rgba(255,255,255, 0.1);
+    background: var(--dark-gray);
     border-radius: 2em;
     font-size: 18px;
 }
@@ -172,7 +181,7 @@ nav ul{
 .about .content .left, .about .content .right{
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: space-around;
     padding: 2em 30px;
     width: 50%;
 }
@@ -207,8 +216,9 @@ nav ul{
     content: 'endangered';
     position: absolute;
     top: 50px;
-    color: #5c5c5c;
-    /* z-index: -1; */
+    left: 20vw;
+    transform: translateX(-50%);
+    color: var(--purple);
 }
 /* -------------- ENDANGERED ------------------- */
 
@@ -226,7 +236,7 @@ nav ul{
     padding: 10% 5%;
     height: 100%;
     margin: auto;
-    background: linear-gradient(rgb(72 0 72 / 29%), rgb(192 72 72 / 20%)), url('/static/images/forest.png');
+    background: linear-gradient(#8e05c282, #3e065f85), url('/static/images/forest.png');
     background-repeat: no-repeat;
     background-size: cover;
 }
@@ -372,6 +382,7 @@ nav ul{
     .read-more{
         font-size: 1em;
     }
+    .about{padding: 15vh 5vw;}
 }
 
 @media all and (max-width: 1050px){
@@ -381,6 +392,27 @@ nav ul{
     }
     .projects .slide-indicator .name {
         font-size: 1em;
+    }
+    .about .content{flex-direction: column;}
+    .about .content .left{
+        order: 2;
+        width: 100%;
+        font-size: 90%;
+    }
+    .about .content .right{
+        order: 1;
+        width: 100%;
+    }
+    .about .right .text:before{
+        left: 48vw;
+    }
+    .about .img-container{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .about .img-container img{
+        width: 50%;
     }
 }
 
@@ -473,6 +505,10 @@ nav ul{
     }
     .slide-text{
         font-size: 60%;
+    }
+    .about .right .text{font-size: 2.5em;}
+    .about .img-container img{
+        width: 90%;
     }
 }
 
