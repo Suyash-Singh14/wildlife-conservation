@@ -346,6 +346,99 @@ nav ul{
 /* -------------- BLOG SECTION ---------------- */
 
 /* -------------- FOOTER SECTION ---------------- */
+.footer{
+    font-family: 'Source Sans Pro', monospace;
+}
+.inner-footer{
+    margin: 0px;
+    padding: 20px;
+    background-color: black;
+}
+.socials {
+    display: flex;   
+}
+.socials ul{
+    padding: 10px 10px;
+    display: flex;
+    width: 300px;
+    height: 50px;
+    margin: auto;
+}
+.socials{
+    list-style: none;
+}
+.socials a{
+    padding: 20px 20px;
+    font-size: 40px;
+}
+.home-links{
+    padding: 30px;
+    display: flex;
+    width: 700px;
+    height: 10px;
+    align-items: center;
+    margin: auto;
+}
+.home-links ul{
+    display: flex;
+}
+.home-items{
+    list-style-type: none;
+}
+.home-items a{
+    text-decoration: none;
+    padding: 20px;
+    font-size: 20px;
+    transition: all .25s;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.home-items a:hover{
+    color: rgb(75, 74, 74);
+}
+.newsletter{
+    text-decoration: none;
+    padding: 0px;
+    font-size: 30px;
+    text-align: center;
+}
+.email-input{
+    width: 450px;
+    max-width: 100%;
+    color: black;
+    text-align: left;
+    font-weight: 500;
+    border-radius: 5px;
+    border: 0px;
+    padding: 10px 0px 10px 20px;
+    font-size: 15px;
+}
+.email-input:focus, .email-input:hover{
+    outline: 0px;
+}
+.subscribe-btn{
+    border: 0px;
+    width: 150px;
+    max-width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    background-color: rgb(29, 29, 29);
+    cursor: pointer;
+    border-radius: 5px;
+    outline: 0;
+    transition: all .3s;
+}
+.subscribe-btn:hover{
+    background: rgb(75, 74, 74);
+}
+.copyrights{
+    padding: 10px;
+    text-align: center;
+    font-size: 16px;
+    background-color: rgb(29, 29, 29);
+}
+
 
 
 
