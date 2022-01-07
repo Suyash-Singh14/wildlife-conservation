@@ -133,11 +133,12 @@ nav{
     position: sticky;
     top: 0;
     left: 0;
+    z-index: 3;
 }
 
 nav .navbar{
-    padding: 5px 20vw;
-    background-color: black;
+    padding: 20px 20vw;
+    background-color: white;
 }
 
 nav ul{
@@ -146,6 +147,11 @@ nav ul{
     justify-content: space-between;
     font-family: 'Poppins';
     font-size: 1.2em;
+}
+
+nav ul a{
+    color: black;
+    font-weight: bold;
 }
 /* -------------- ABOUT SECTION ---------------- */
 .about{
@@ -221,8 +227,6 @@ nav ul{
     transform: translateX(-50%);
     color: var(--purple);
 }
-/* -------------- ENDANGERED ------------------- */
-
 
 /* -------------- PROJECTS SECTION ---------------- */
 .projects{
@@ -354,6 +358,84 @@ nav ul{
 .projects .slide-indicator button i{
     font-size: 1.5em;
 }
+
+/* -------------- ENDANGERED ------------------- */
+.animals{
+    display: flex;
+    flex-direction: column;
+    padding: 10% 15%;
+}
+
+.animals .title{
+    font-family: 'Teko', sans-serif;
+    font-size: 5em;
+    display: inline-block;
+    margin: 1em auto;
+    border-bottom: 2px solid white;
+}
+
+.animals .layout{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.animals .layout .animal{
+    height: 400px;
+}
+
+
+.animals .layout .donate{
+    grid-row: 3 / span 5;
+    border: 1px solid white;
+}
+
+.animal{
+    position: relative;
+    transform-style: preserve-3d;
+}
+
+.face{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transform-style: preserve-3d;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: ease 1s;
+    transform: perspective(1000px) rotateY(0deg);
+}
+
+.face .img-container{
+    width: 80%;
+    height: 80%;
+}
+.face img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+
+}
+
+.face.back{
+    background: var(--dark);
+    transform: perspective(1000px) rotateY(180deg);
+}
+
+.animal:hover .face.back{
+    transform: perspective(1000px) rotateY(360deg);
+}
+
+.animal:hover .face.front{
+    transform: perspective(1000px) rotateY(180deg);
+}
+
+.animal h1{
+    font-size: 4em;
+    transform: perspective(1000px) translateZ(4rem);
+}
 /* -------------- BLOG SECTION ---------------- */
 
 /* -------------- FOOTER SECTION ---------------- */
@@ -371,22 +453,17 @@ nav ul{
 .socials ul{
     padding: 10px 10px;
     display: flex;
-    width: 300px;
-    height: 75px;
     margin: auto;
 }
 
-.socials{
-    list-style: none;
+.socials ul li{
+    margin: 10px;
 }
 .socials a{
     padding: 10px;
-    font-size: 40px;
-    position: relative;
-    display: block;
+    font-size: 2em;
     width: 60px;
     height: 60px;
-    border-radius: 50%;
     background-color: rgb(189, 148, 228);
 }
 .socials i:hover{
