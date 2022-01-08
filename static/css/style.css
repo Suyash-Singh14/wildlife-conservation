@@ -470,6 +470,75 @@ nav ul a{
     transform: perspective(1000px) translateZ(4rem);
 }
 /* -------------- BLOG SECTION ---------------- */
+.blog{
+    display: flex;
+    font-family: 'Poppins';
+    justify-content: center;
+    align-items: center;
+    padding: 80px;
+    
+}
+.blog, .container-left, .container-right{
+   /* margin: 10px; */
+}
+.container-left{
+    width: 70%;
+    display: flex;
+
+}
+.container-left .pop-articles{
+    font-family: 'Poppins';
+    padding: 5px;
+}
+.pop-articles i{
+    margin: 10px;
+}
+.text-left h1{
+    font-size: 5em;
+    line-height: 80%;
+    font-family: 'Teko', sans-serif;
+    width: 150%;
+    z-index: 5;
+    position: relative;
+    margin-bottom: 30px;
+
+}
+.text-left{
+    width: 60%;
+    padding: 3em 1em;
+}
+.blog .deer img{
+    width: 100%;
+}
+.blog .deer {
+    width: 40%;
+}
+.container-right{
+    text-transform: uppercase;
+    display: flex;
+    flex-direction: column;
+    width: 30%;
+    padding: 1em;
+}
+.container-right a{
+    display: block;
+}
+
+.right-titles{
+    border-bottom: 2px solid white;
+    font-size: 1.2em;
+    margin-bottom: 1em;
+    padding-bottom: 1em;
+}
+.blog .container-right .read-more{
+    
+    font-size: 0.7em;
+    width: 150px;
+    text-align: center;
+
+}
+
+
 
 /* -------------- FOOTER SECTION ---------------- */
 .footer{
