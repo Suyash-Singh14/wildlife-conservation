@@ -1,7 +1,8 @@
 /* font-family: 'Bebas Neue', cursive;
 font-family: 'Open Sans Condensed', sans-serif;
 font-family: 'Poppins', sans-serif; 
-font-family: 'Source Sans Pro', monospace;*/
+font-family: 'Source Sans Pro', monospace;
+font-family: 'Teko', sans-serif;*/
 
 *{
     margin: 0;
@@ -40,7 +41,13 @@ body{background-color: var(--dark);}
 }
 
 .social-links i{
+    color: var(--purple);
     font-size: 1.2em;
+}
+
+.social-links i:hover{
+    color: white;
+    transition: 0.3s ease;
 }
 
 .read-more{
@@ -52,7 +59,15 @@ body{background-color: var(--dark);}
     padding: 5px 20px;
     width: 150px;
 }
-
+.btn:hover, .read-more:hover{
+    background-color: white;
+    color: black;
+    transition: 500ms ease;
+}
+.btn:hover a{
+    color: black;
+    transition: 500ms ease;
+}
 /* -------------- HEADER SECTION ---------------- */
 .header{
     height: 100vh;
@@ -66,10 +81,8 @@ body{background-color: var(--dark);}
     align-items: center;
 }
 
-.header .logo{
-    font-family: 'Poppins', sans-serif;
-    font-weight: bold;
-    font-size: 2em;
+.header .logo img{
+    height: 300px;
 }
 
 .header .mid{
@@ -114,6 +127,9 @@ body{background-color: var(--dark);}
     /* width: 10%; */
 } 
 
+.header .bottom .left h1, .header .bottom .right h1{
+    color: #d6b1eb;
+}
 .header .bottom .right{
     transform: rotate(90deg);
 }
@@ -124,6 +140,7 @@ body{background-color: var(--dark);}
     top: 20px;
     left: -15px;
     font-size: 2em;
+    z-index: -1;
     -webkit-text-stroke: 1px #fff;
     color: transparent;
 }
@@ -132,11 +149,12 @@ nav{
     position: sticky;
     top: 0;
     left: 0;
+    z-index: 3;
 }
 
 nav .navbar{
-    padding: 5px 20vw;
-    background-color: black;
+    padding: 20px 20vw;
+    background-color: white;
 }
 
 nav ul{
@@ -146,6 +164,17 @@ nav ul{
     font-family: 'Poppins';
     font-size: 1.2em;
 }
+
+nav ul a{
+    color: black;
+    font-weight: bold;
+    transition: 300ms ease;
+}
+
+.navbar ul li a:hover{
+    color: var(--dark-gray);
+}
+
 /* -------------- ABOUT SECTION ---------------- */
 .about{
     display: flex;
@@ -157,8 +186,8 @@ nav ul{
 
 .about .title{
     text-align: center;
-    font-family: 'Bebas Neue', cursive;
-    font-size: 3em;
+    font-family: 'Teko', sans-serif;
+    font-size: 5em;
     text-transform: uppercase;
     letter-spacing: 3px;
 }
@@ -220,8 +249,6 @@ nav ul{
     transform: translateX(-50%);
     color: var(--purple);
 }
-/* -------------- ENDANGERED ------------------- */
-
 
 /* -------------- PROJECTS SECTION ---------------- */
 .projects{
@@ -353,50 +380,163 @@ nav ul{
 .projects .slide-indicator button i{
     font-size: 1.5em;
 }
+
+/* -------------- ENDANGERED ------------------- */
+.animals{
+    display: flex;
+    flex-direction: column;
+    padding: 10% 15%;
+}
+
+.animals .title{
+    font-family: 'Teko', sans-serif;
+    font-size: 5em;
+    display: inline-block;
+    margin: auto;
+    /* border-bottom: 2px solid var(--green); */
+}
+
+.animals .line{
+    width: 300px;
+    height: 5px;
+    background-color: rgb(1 219 196);
+    margin:auto;
+    margin-bottom: 7em;
+}
+
+.animals .layout{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.animals .layout .animal{
+    height: 400px;
+}
+
+.animals .layout .donate{
+    grid-row: 3 / span 5;
+    background: url('/static/images/donate_bg');
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.animal{
+    position: relative;
+    transform-style: preserve-3d;
+}
+
+.face{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transform-style: preserve-3d;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: ease 1s;
+    transform: perspective(1000px) rotateY(0deg);
+}
+
+.face .img-container{
+    width: 80%;
+    height: 80%;
+}
+.face img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.face.back{
+    background: var(--dark);
+    transform: perspective(1000px) rotateY(180deg);
+}
+
+.animal:hover .face.back{
+    transform: perspective(1000px) rotateY(360deg);
+}
+
+.animal:hover .face.front{
+    transform: perspective(1000px) rotateY(180deg);
+}
+
+.animal h1{
+    font-size: 4em;
+    font-family: 'Poppins';
+    color: #b57e34;
+    transform: perspective(1000px) translateZ(4rem);
+}
 /* -------------- BLOG SECTION ---------------- */
 .blog{
     display: flex;
-    border: 2px solid white;
-    font-family: 'Source Sans Pro', monospace;
+    font-family: 'Poppins';
     justify-content: center;
     align-items: center;
     padding: 80px;
-    margin: 10px;
+    
 }
 .blog, .container-left, .container-right{
-    border: 2px solid white;
-    margin: 15px;
-    text-transform: uppercase;
+   /* margin: 10px; */
 }
 .container-left{
     width: 70%;
     display: flex;
+
 }
-/* .blog .container-left h1, p{
-    padding: 30px;
-    justify-content: center;
-    align-items: center;
-} */
+.container-left .pop-articles{
+    font-family: 'Poppins';
+    padding: 5px;
+}
+.pop-articles i{
+    margin: 10px;
+}
+.text-left h1{
+    font-size: 5em;
+    line-height: 80%;
+    font-family: 'Teko', sans-serif;
+    width: 150%;
+    z-index: 5;
+    position: relative;
+    margin-bottom: 30px;
 
-
+}
+.text-left{
+    width: 60%;
+    padding: 3em 1em;
+}
 .blog .deer img{
-    height: 600px;
-    width: 500px;
+    width: 100%;
+}
+.blog .deer {
+    width: 40%;
 }
 .container-right{
-    padding: 10px;
+    text-transform: uppercase;
+    display: flex;
+    flex-direction: column;
+    width: 30%;
+    padding: 1em;
 }
-.container-right h5{
-    padding: 10px;
+.container-right a{
+    display: block;
 }
-.container-right ul li{
-    font-size: 20px;
-    padding: 40px;
+
+.right-titles{
+    border-bottom: 2px solid white;
+    font-size: 1.2em;
+    margin-bottom: 1em;
+    padding-bottom: 1em;
 }
-.container-right ul li:hover{
-    color: var(--dark-gray);
-    transition: 0.5s;
+.blog .container-right .read-more{
+    
+    font-size: 0.7em;
+    width: 150px;
+    text-align: center;
+
 }
+
 
 
 /* -------------- FOOTER SECTION ---------------- */
@@ -414,22 +554,17 @@ nav ul{
 .socials ul{
     padding: 10px 10px;
     display: flex;
-    width: 300px;
-    height: 75px;
     margin: auto;
 }
 
-.socials{
-    list-style: none;
+.socials ul li{
+    margin: 10px;
 }
 .socials a{
     padding: 10px;
-    font-size: 40px;
-    position: relative;
-    display: block;
+    font-size: 2em;
     width: 60px;
     height: 60px;
-    border-radius: 50%;
     background-color: rgb(189, 148, 228);
 }
 .socials i:hover{
