@@ -354,6 +354,50 @@ nav ul{
     font-size: 1.5em;
 }
 /* -------------- BLOG SECTION ---------------- */
+.blog{
+    display: flex;
+    border: 2px solid white;
+    font-family: 'Source Sans Pro', monospace;
+    justify-content: center;
+    align-items: center;
+    padding: 80px;
+    margin: 10px;
+}
+.blog, .container-left, .container-right{
+    border: 2px solid white;
+    margin: 15px;
+    text-transform: uppercase;
+}
+.container-left{
+    width: 70%;
+    display: flex;
+}
+/* .blog .container-left h1, p{
+    padding: 30px;
+    justify-content: center;
+    align-items: center;
+} */
+
+
+.blog .deer img{
+    height: 600px;
+    width: 500px;
+}
+.container-right{
+    padding: 10px;
+}
+.container-right h5{
+    padding: 10px;
+}
+.container-right ul li{
+    font-size: 20px;
+    padding: 40px;
+}
+.container-right ul li:hover{
+    color: var(--dark-gray);
+    transition: 0.5s;
+}
+
 
 /* -------------- FOOTER SECTION ---------------- */
 .footer{
