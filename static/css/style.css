@@ -12,12 +12,9 @@ font-family: 'Teko', sans-serif;*/
 }
 
 :root{
-    --purple: rgb(193 146 252);
     --dark: #121212;
     --dark-gray: #222222;
     --green: rgb(1 219 196);
-    --dark-purple: #3E065F;
-    --light-purple: #8E05C2;
     --gold: #b57e34;
 }
 
@@ -42,7 +39,7 @@ body{background-color: var(--dark);}
 }
 
 .social-links i{
-    color: var(--purple);
+    color: var(--gold);
     font-size: 1.2em;
 }
 
@@ -129,7 +126,7 @@ body{background-color: var(--dark);}
 } 
 
 .header .bottom .left h1, .header .bottom .right h1{
-    color: #d6b1eb;
+    color: var(--gold);
 }
 .header .bottom .right{
     transform: rotate(90deg);
@@ -248,7 +245,7 @@ nav ul a{
     top: 50px;
     left: 20vw;
     transform: translateX(-50%);
-    color: var(--purple);
+    color: var(--gold);
 }
 
 /* -------------- PROJECTS SECTION ---------------- */
@@ -414,13 +411,6 @@ nav ul a{
     height: 400px;
 }
 
-.animals .layout .donate{
-    grid-row: 3 / span 5;
-    background: url('/static/images/donate_bg');
-    background-size: cover;
-    background-repeat: no-repeat;
-}
-
 .animal{
     position: relative;
     transform-style: preserve-3d;
@@ -466,68 +456,126 @@ nav ul a{
 .animal h1{
     font-size: 4em;
     font-family: 'Poppins';
+    text-align: center;
+    width: 80%;
     color: var(--gold);
     transform: perspective(1000px) translateZ(4rem);
+}
+/* ----------------- Donate section --------------- */
+.animals .layout .donate{
+    grid-row: 3 / span 5;
+    background: url('/static/images/donate_bg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-family: 'Poppins';
+    padding: 2em 1em;
+}
+
+.donate .title{
+    font-family: 'Teko';
+    font-size: 5em;
+    font-weight: bold;
+    display: block;
+    margin: 0;
+}
+
+.donate .amounts{
+    padding: 1em;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.donate .amounts input{
+    color: var(--dark);
+}
+
+.donate .buttons{
+    margin: 1em 0;
+}
+
+.donate .donate-btn{
+    background-color: var(--gold);
+    color: white;
+    font-family: 'Teko';
+    font-size: 1.5em;
+    padding: 5px 30px;
+    outline: none;
+    border: 0;
+    border-radius: 10px;
+    margin-right: 1em;
+}
+
+.donate .custom-amount-btn{
+    background-color: white;
+    color: var(--dark-gray);
 }
 /* -------------- BLOG SECTION ---------------- */
 .blog{
     display: flex;
     font-family: 'Poppins';
     justify-content: center;
-    align-items: center;
-    padding: 80px;
-    
+    padding: 10%;
 }
-.blog, .container-left, .container-right{
-   /* margin: 10px; */
-}
-.container-left{
+
+.blog .container-left{
     width: 70%;
     display: flex;
-
 }
-.container-left .pop-articles{
+
+.blog .container-left .pop-articles{
     font-family: 'Poppins';
     padding: 5px;
 }
-.pop-articles i{
+.blog .pop-articles i{
     margin: 10px;
 }
-.text-left h1{
+
+.blog .text-left h1{
     font-size: 5em;
     line-height: 80%;
     font-family: 'Teko', sans-serif;
-    width: 150%;
+    width: 120%;
     z-index: 5;
     position: relative;
     margin-bottom: 30px;
-
 }
-.text-left{
+
+.blog .text-left{
     width: 60%;
     padding: 3em 1em;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
+
 .blog .deer img{
     width: 100%;
 }
 .blog .deer {
     width: 40%;
 }
-.container-right{
+
+.blog .container-right{
     text-transform: uppercase;
     display: flex;
     flex-direction: column;
+    justify-content: center;
     width: 30%;
     padding: 1em;
 }
-.container-right a{
+
+.blog .container-right a{
     display: block;
+    margin: 15px;
 }
 
-.right-titles{
-    border-bottom: 2px solid white;
+.blog .right-titles{
+    border-bottom: 3px solid #2e2c2c;
     font-size: 1.2em;
-    margin-bottom: 1em;
+    margin-bottom: 2em;
     padding-bottom: 1em;
 }
 .blog .container-right .read-more{
@@ -538,7 +586,10 @@ nav ul a{
 
 }
 
-
+.blog .titles:hover, .blog h1:hover{
+    color: var(--gold);
+    transition: 300ms ease;
+}
 
 /* -------------- FOOTER SECTION ---------------- */
 .footer{
@@ -568,7 +619,7 @@ nav ul a{
     height: 60px;
 }
 .socials i:hover{
-    color: var(--purple);
+    color: var(--gold);
     transition: 300ms ease;
 }
 
@@ -649,6 +700,7 @@ nav ul a{
     .projects .image-slide img{
         height: 70%; 
     }
+    .animals .line{margin-bottom: 0;}
 }
 @media all and (max-width: 1300px) {
     .header .mid .text{
@@ -668,6 +720,8 @@ nav ul a{
         font-size: 1em;
     }
     .about{padding: 15vh 5vw;}
+    .donate .title{font-size: 4em;}
+    .donate .donate-btn{font-size: 1.2em;}
 }
 
 @media all and (max-width: 1050px){
@@ -699,6 +753,19 @@ nav ul a{
     .about .img-container img{
         width: 50%;
     }
+    .animal h1 {
+        font-size: 3em;
+    }
+    .animals .title{font-size: 4em;}
+    .animals{    padding: 10% 10%;    }
+    nav .navbar {
+        padding: 20px 10vw;
+    }
+}
+
+@media all and (max-width: 900px){
+    .donate .donate-btn{margin: 10px 0;}
+    .animals .title{font-size: 3em;}
 }
 
 @media all and (max-width: 800px){
@@ -734,6 +801,23 @@ nav ul a{
         width: 50%;
         margin: auto;
     }
+    .animals .layout { grid-template-columns: 1fr; }
+    .animals .layout .donate{
+        grid-row-start: 7;
+        border: 1px solid black;
+    }
+    .animals .title{font-size: 2.5em;}
+    nav ul{font-size: 1em;}
+    .header .logo img {
+        height: 200px;
+    }
+    .about .right .text{font-size: 2em;}
+    .about .right .text:before{
+        top: 34px;
+    }
+    .about .title{
+        font-size: 4em;
+    }
 }
 
 @media all and (max-height: 800px) {
@@ -755,6 +839,9 @@ nav ul a{
     .projects .image-slide img {
         width: 90%;
     }
+    nav ul {
+        font-size: 0.8em;
+    }
 }
 
 @media all and (max-height: 700px) {
@@ -764,6 +851,7 @@ nav ul a{
     .projects .container{
         padding: 5%;
     }
+    .animals{    padding: 10% 5%;    }
 }
 
 @media all and (max-width: 575px) {
@@ -795,5 +883,6 @@ nav ul a{
     .about .img-container img{
         width: 90%;
     }
+    .header .top { padding: 0 20px;}
 }
 
