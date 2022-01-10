@@ -556,6 +556,9 @@ nav ul a{
 }
 .blog .deer {
     width: 40%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .blog .container-right{
@@ -701,6 +704,11 @@ nav ul a{
         height: 70%; 
     }
     .animals .line{margin-bottom: 0;}
+    .blog .right-titles{
+        margin-bottom: 1em;
+        padding-bottom: 10px;
+    }
+    .blog .deer{width: 60%;}
 }
 @media all and (max-width: 1300px) {
     .header .mid .text{
@@ -722,6 +730,9 @@ nav ul a{
     .about{padding: 15vh 5vw;}
     .donate .title{font-size: 4em;}
     .donate .donate-btn{font-size: 1.2em;}
+    .blog .container-right a{margin: 5px;}
+    .blog .text-left h1{font-size: 4em;}
+    .blog .right-titles{font-size: 15px;}
 }
 
 @media all and (max-width: 1050px){
@@ -760,6 +771,10 @@ nav ul a{
     .animals{    padding: 10% 10%;    }
     nav .navbar {
         padding: 20px 10vw;
+    }
+    .blog .text-left{font-size: 80%;}
+    .blog .right-titles {
+        font-size: 12px;
     }
 }
 
@@ -818,6 +833,21 @@ nav ul a{
     .about .title{
         font-size: 4em;
     }
+    .blog{
+        flex-direction: column;
+    }
+    .blog .container-left, .blog .container-right{width: 100%;}
+    .blog .container-right ul{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+    }
+    .blog .right-titles{
+        border: none;
+        width: 30%;
+        text-align: center;
+    }
 }
 
 @media all and (max-height: 800px) {
@@ -842,6 +872,11 @@ nav ul a{
     nav ul {
         font-size: 0.8em;
     }
+    .blog{padding: 10% 2%;}
+    .blog .container-right .read-more {
+        width: 100px;
+        margin: auto;
+    } 
 }
 
 @media all and (max-height: 700px) {
@@ -884,5 +919,8 @@ nav ul a{
         width: 90%;
     }
     .header .top { padding: 0 20px;}
+    .blog .text-left h1 {
+        font-size: 3em;
+    }
 }
 
