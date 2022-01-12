@@ -270,7 +270,7 @@ nav ul a{
     padding: 10% 5%;
     height: 100%;
     margin: auto;
-    background: linear-gradient(#8e05c282, #3e065f85), url('/static/images/forest.png');
+    background: linear-gradient(#8e05c282, #3e065f85), url('../images/forest.png');
     background-repeat: no-repeat;
     background-size: cover;
 }
@@ -473,7 +473,7 @@ nav ul a{
 /* ----------------- Donate section --------------- */
 .animals .layout .donate{
     grid-row: 3 / span 5;
-    background: url('/static/images/donate_bg');
+    background: url('../images/donate_bg');
     background-size: cover;
     background-repeat: no-repeat;
     display: flex;
