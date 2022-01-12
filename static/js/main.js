@@ -68,3 +68,56 @@ button4.addEventListener('mouseleave', function(){
     slide4.classList.add("hidden");
     ImgSlide4.classList.add('hidden');
 })
+
+//  animations
+gsap.from('.top', {duration: 1, y:'-20%', opacity:'0', ease: "power2.out", delay:1});
+gsap.from('.mid', {duration: 2, y:'10%', opacity:'0', ease: "power2.out", delay:1.5});
+gsap.from('.bottom .left', {duration: 1, x:'-10%', opacity:'0', ease: "power2.out", delay:1});
+gsap.from('.bottom .right', {duration: 1, x:'10%', opacity:'0', ease: "power2.out", delay:1});
+
+
+// scroll animations
+gsap.from(".about", {
+    scrollTrigger: {
+        trigger: ".about", 
+        start: "top center",
+        ease: "power2.in"
+    },
+    y: 200,
+    opacity:0,
+    duration:1
+});
+
+gsap.from(".text-left", {
+    scrollTrigger: {
+        trigger: ".blog", 
+        start: "top center",
+        ease: "power2.in"
+    },
+    x: -200,
+    opacity:0,
+    duration: 1
+});
+
+gsap.from(".deer", {
+    scrollTrigger: {
+        trigger: ".blog", 
+        start: "top center",
+        ease: "power2.in"
+    },
+    scale: 0.6,
+    opacity:0,
+    duration:1
+});
+
+gsap.from(".container-right", {
+    scrollTrigger: {
+        trigger: ".blog", 
+        start: "top center",
+        ease: "power2.in"
+    },
+    x: 200,
+    opacity:0,
+    duration:1
+});
+

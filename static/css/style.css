@@ -20,7 +20,10 @@ font-family: 'Teko', sans-serif;*/
 
 li{list-style-type: none;}
 a{text-decoration: none; color: white;}
-body{background-color: var(--dark);}
+body{
+    background-color: var(--dark);
+    overflow-x: hidden;
+}
 
 .btn{
     border: 2px solid white;
@@ -518,6 +521,7 @@ nav ul a{
     font-family: 'Poppins';
     justify-content: center;
     padding: 10%;
+    padding-top: 5%;
 }
 
 .blog .container-left{
@@ -629,7 +633,7 @@ nav ul a{
 .home-links{
     padding: 5px 0;
     display: flex;
-    width: 100vw;
+    width: 100%;
     align-items: center;
     margin: auto;
     flex-direction: column;
