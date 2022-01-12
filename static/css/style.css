@@ -547,7 +547,7 @@ nav ul a{
     font-size: 5em;
     line-height: 80%;
     font-family: 'Teko', sans-serif;
-    width: 120%;
+    width: 150%;
     z-index: 5;
     position: relative;
     margin-bottom: 30px;
@@ -555,6 +555,7 @@ nav ul a{
 
 .blog .text-left{
     width: 60%;
+    z-index: 2;
     padding: 3em 1em;
     display: flex;
     flex-direction: column;
